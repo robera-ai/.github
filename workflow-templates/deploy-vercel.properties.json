@@ -1,0 +1,6 @@
+{
+  "name": "Robera.AI Deploy to Vercel",
+  "description": "Reusable Vercel deployment workflow — production on main, preview on PRs.",
+  "iconName": "octicon rocket",
+  "categories": ["Deployment", "Vercel"]
+}

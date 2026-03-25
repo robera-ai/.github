@@ -1,0 +1,6 @@
+{
+  "name": "Robera.AI CI",
+  "description": "CI workflow for TypeScript/Bun projects — lint, typecheck, test, build, and optional E2E.",
+  "iconName": "octicon check-circle",
+  "categories": ["TypeScript", "Bun", "CI"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Robera.AI Deploy to Railway",
+  "description": "Reusable Railway deployment workflow.",
+  "iconName": "octicon rocket",
+  "categories": ["Deployment", "Railway"]
+}

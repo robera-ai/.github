@@ -1,0 +1,39 @@
+name: Deploy to Railway
+
+on:
+  workflow_call:
+    inputs:
+      service-id:
+        description: "Railway Service ID"
+        required: true
+        type: string
+      environment-id:
+        description: "Railway Environment ID"
+        required: true
+        type: string
+    secrets:
+      RAILWAY_TOKEN:
+        description: "Railway API token"
+        required: true
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    env:
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Deploy to Railway
+        run: |
+          railway up \
+            --service ${{ inputs.service-id }} \
+            --environment ${{ inputs.environment-id }} \
+            --detach
